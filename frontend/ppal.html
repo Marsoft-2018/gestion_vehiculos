@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flota</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <script src="js/ppal.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid" style="width: 10%;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Vehículos</a>
+              <a class="nav-link disabled" href="#">Equipos Menores</a>
+              <a class="nav-link disabled" href="#">ITS</a>
+              <a class="nav-link" href="#">Salir</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="row">       
+        <div class="col-sm-2 mt-3 mb-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active fa fa-dashboard" aria-current="page" href="#" id="mnu_dash"> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fa fa-check-square-o" href="#" id="mnu_preo"> Preoperacional</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fa fa-stethoscope" href="#" id="mnu_mtto"> Mantenimiento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fa fa-car" href="#" id="mnu_vehiculo"> Vehículo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fa fa-bus" href="#" id="mnu_inventario"> Inventario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fa fa-bar-chart" href="#" id="mnu_consultas"> Consultas</a>
+                </li>
+                
+                <li data-toggle="collapse" data-target="#mnu_para" class="collapsed">
+                  <a href="#"><i class="fa fa-cog"></i> Parametrizar <span class="arrow"></span></a>
+                </li>
+                <ul class="collapse" id="mnu_para">
+                  <li class="nav-link" id="mnu_eds"><a href="#">EDS - Estaciones de Servicio</a></li>
+                  <li class="nav-link" id="mnu_flotas"><a href="#">Flotas</a></li>
+                  <li class="nav-link" id="mnu_peajes"><a href="#">Peajes</a></li>
+                  <li class="nav-link" id="mnu_rutinas"><a href="#">Rutinas</a></li>
+                  <li class="nav-link" id="mnu_sistemas"><a href="#">Sistemas</a></li>
+                  <li class="nav-link" id="mnu_tipo_combustible"><a href="#">Tipo Combustible</a></li>
+                  <li class="nav-link" id="mnu_empresa"><a href="#">Empresa</a></li>
+                  <li class="nav-link" id="mnu_clase"><a href="#">Clase de vehículos</a></li>
+                  <li class="nav-link" id="mnu_marcas"><a href="#">Marcas de vehículos</a></li>
+                  <li class="nav-link" id="mnu_tipos"><a href="#">Tipos de vehículos</a></li>
+                </ul>
+                
+                
+            </ul>
+        </div>
+  
+        <div class="col-sm-10 mt-3 mb-3" id="div_mvto">
+            
+        </div>
+    </div>
+</div>
+    </body>
+</html>
