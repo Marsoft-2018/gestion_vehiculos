@@ -9,7 +9,16 @@ $("document").ready(function(){
     });
     
     $("#mnu_mtto").click(function(event){
-       $("#div_mvto").load("frontend/mtto.html");
+      $.ajax({
+         url:"Vista/Mantenimientos/index.php",
+         type: "POST",
+         success:function(response){
+            $("#div_mvto").html(response);
+         },
+         error: function(err){
+            console.log("Error: "+err);
+         }
+      });
     });
     
     $("#mnu_vehiculo").click(function(event){
