@@ -22,7 +22,17 @@ $("document").ready(function(){
     });
     
     $("#mnu_vehiculo").click(function(event){
-       $("#div_mvto").load("frontend/vehiculo.html");
+      $.ajax({
+         url:"Controlador/vehiculos_controller.php",
+         type: "POST",
+         data:{accion:"nuevo"},
+         success:function(response){
+            $("#div_mvto").html(response);
+         },
+         error: function(err){
+            console.log("Error: "+err);
+         }
+      });
     });
     
     $("#mnu_inventario").click(function(event){

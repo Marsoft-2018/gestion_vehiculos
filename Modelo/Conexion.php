@@ -1,7 +1,7 @@
 <?php
     abstract class Conectar{
         private $host = "localhost";
-        private $bdt = "bdt_mantenimiento";
+        private $bdt = "bdt_gestion_vehiculos";
         //Conexion local
         private $usuario= "root";
         private $password = ""; //password xampp

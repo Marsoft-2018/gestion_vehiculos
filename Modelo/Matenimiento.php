@@ -20,7 +20,7 @@
         public $registros;
 
         public function cargar(){
-            $this->sql = "SELECT *  FROM mantenimientos 
+            $this->sql = "SELECT id, placa, nombre, idMarca, idTipo, idTipoCombustible, numero_motor, numero_chasis, modelo, idEmpresaSoat  FROM mantenimientos 
             WHERE placa = ?"; 
             
             try {
@@ -49,6 +49,20 @@
                 $stm->execute();
                 $data = $stm->fetchAll(PDO::FETCH_ASSOC);
                 return $data;
+            } catch (Exception $e) {
+                echo "Error al consultar los datos ".$e;
+            }
+        }
+
+        public function eliminar(){
+            $this->sql = "DELETE FROM mantenimientos WHERE placa = ?"; 
+            
+            try {
+                $stm = $this->Conexion->prepare($this->sql);
+                $stm->bindparam(1,$this->placa);
+                if($stm->execute()){
+                    echo "Registro eliminado de forma exitosa";
+                }
             } catch (Exception $e) {
                 echo "Error al consultar los datos ".$e;
             }
