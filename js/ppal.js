@@ -28,6 +28,7 @@ $("document").ready(function(){
          data:{accion:"nuevo"},
          success:function(response){
             $("#div_mvto").html(response);
+            $('.select2').select2();
          },
          error: function(err){
             console.log("Error: "+err);

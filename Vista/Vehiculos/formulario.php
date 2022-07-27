@@ -52,7 +52,7 @@
                 <button class="btn btn-outline-primary" type="button" id="btnBuscar" onclick="cargar_vehiculo()"><i class="fa fa-search"></i></button>
             </div>
             <label>Tipo</label>
-            <select class="js-example-basic-multiple form-control" id="tipo"> 
+            <select class="select2 form form-control" id="tipo"> 
                 <option value="AL">Alabama</option> 
                 <option value="WY">Wyoming</option> 
             </select>
@@ -71,7 +71,10 @@
 
         <div class="col-sm-4">
             <label>Marca</label>
-            <select class="form-control" id="marca" ></select>
+            <select class="select2 form form-control py-4" id="marca"> 
+                <option value="AL">Chevrolet</option> 
+                <option value="WY">Toyota</option> 
+            </select>
             <label>Flota</label>
             <select class="form-control" id="flota"></select>
             <label>Modelo</label>
