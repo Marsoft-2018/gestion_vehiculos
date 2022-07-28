@@ -13,15 +13,14 @@ function nuevo_vehiculo(){
 }
 
 function cargar_vehiculo(){
-
     var placa = $("#placa").val();
-    alert("Esta jodia qué?: placa "+placa);
     $.ajax({
         url:"Controlador/vehiculos_controller.php",
         type: "POST",
         data:{accion:"editar",placa:placa},
         success:function(response){
-           $("#div_vehiculo").html(response);
+         console.log(response);
+           $("#div_mvto").html(response);
         },
         error: function(err){
            console.log("Error: "+err);

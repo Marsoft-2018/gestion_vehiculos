@@ -32,17 +32,7 @@
     }
 
 ?>
-
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Vehículos</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="container card shadow mt-3 mb-5">
+<div class="container card shadow mt-3 mb-5">
     <h3 class="mt-3">Información del Vehículo</h3>
     <div class="row mb-3">
         <div class="col-sm-4">
@@ -52,9 +42,14 @@
                 <button class="btn btn-outline-primary" type="button" id="btnBuscar" onclick="cargar_vehiculo()"><i class="fa fa-search"></i></button>
             </div>
             <label>Tipo</label>
-            <select class="select2 form form-control" id="tipo"> 
-                <option value="AL">Alabama</option> 
-                <option value="WY">Wyoming</option> 
+            <select class="form form-control" id="tipo"> 
+                <?php
+                    $objTipos = new Tipo();
+                    foreach ($objTipos->listar() as $tipo) { ?>
+                        <option value="<?php echo $tipo['id'] ?>"><?php echo $tipo['nombre'] ?></option>                     
+                <?php
+                    }
+                ?>  
             </select>
             <label>Número del Motor</label>
             <input class="form-control" type="text" id="" value="<?php echo $numero_motor ?>">
@@ -62,18 +57,31 @@
 
         <div class="col-sm-4">
             <label>Nombre</label>
-            <input type="text" id="" value="<?php echo $nombre ?>">
+            <input type="text" class="form-control" id="nombre" value="<?php echo $nombre ?>">
             <label>Tipo de Combustible</label>
-            <select class="form-control" id="tipo_combustible"></select>
+            <select class="form-control" id="tipo_combustible">
+                <?php
+                    $objCombustible = new Tipo_combustible();
+                    foreach ($objCombustible->listar() as $combustible) { ?>
+                        <option value="<?php echo $combustible['id'] ?>"><?php echo $combustible['nombre'] ?></option>                     
+                <?php
+                    }
+                ?> 
+            </select>
             <label>Número del Chasis</label>
             <input class="form-control" type="text" id="" value="<?php echo $numero_chasis ?>">
         </div>
 
         <div class="col-sm-4">
             <label>Marca</label>
-            <select class="select2 form form-control py-4" id="marca"> 
-                <option value="AL">Chevrolet</option> 
-                <option value="WY">Toyota</option> 
+            <select class="form form-control py-4" id="marca">
+                <?php
+                    $objMarcas = new Marca();
+                    foreach ($objMarcas->listar() as $marca) { ?>
+                        <option value="<?php echo $marca['id'] ?>"><?php echo $marca['nombre'] ?></option>                     
+                <?php
+                    }
+                ?> 
             </select>
             <label>Flota</label>
             <select class="form-control" id="flota"></select>
@@ -151,5 +159,3 @@
         </div>
     </div>
 </div>
-    </body>
-</html>

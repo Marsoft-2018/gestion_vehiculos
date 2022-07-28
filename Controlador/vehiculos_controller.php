@@ -1,6 +1,10 @@
 <?php
     require("../Modelo/Conexion.php");
     require("../Modelo/Vehiculo.php");
+    require("../Modelo/marcas.php");
+    require("../Modelo/tipos.php");
+    require("../Modelo/vehiculos_clase.php");
+    require("../Modelo/tipo_combustible.php");
 
     $accion = "";
 
