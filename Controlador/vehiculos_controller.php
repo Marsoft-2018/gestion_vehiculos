@@ -44,7 +44,7 @@
         break;
 
         case 'nuevo' : case "editar":
-            echo "Esta en la seccion de: ".$accion;
+            //echo "Esta en la seccion de: ".$accion;
             $objVehiculo = new Vehiculo();
             $btnFuncion ="agregarVehiculo()";
             include("../Vista/Vehiculos/formulario.php");

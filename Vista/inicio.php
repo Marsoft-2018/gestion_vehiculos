@@ -117,7 +117,7 @@
   <div class="content-wrapper">
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid" id="div_mvto">
+      <div class="container-fluid py-4"  id="div_mvto">
 
       </div><!-- /.container-fluid -->
     </section>
