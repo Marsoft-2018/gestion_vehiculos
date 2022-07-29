@@ -27,3 +27,19 @@ function cargar_vehiculo(){
         }
      });
 }
+
+function listar_vehiculos(){
+   var placa = $("#placa").val();
+   $.ajax({
+       url:"Controlador/vehiculos_controller.php",
+       type: "POST",
+       data:{accion:"listar"},
+       success:function(response){
+         $("#listaVehiculos").html(response);
+         console.log(response);
+       },
+       error: function(err){
+          console.log("Error: "+err);
+       }
+    });
+}

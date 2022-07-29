@@ -56,10 +56,11 @@
             $objVehiculo->eliminar();
         break;
         case 'listar':
-            $objVehiculo = new Vehiculo();           
-            $objVehiculo->vehiculo  = $_POST['vehiculo'];
-            $objVehiculo->empresa = $_POST['empresa'];
-            $objVehiculo->valor  = $_POST['valor'];
+            $objVehiculo = new Vehiculo();          
+            include("../Vista/Vehiculos/listado.php");
+        break;
+        case 'listar_datos':
+            $objVehiculo = new Vehiculo();          
             echo json_encode( $objVehiculo->listar());
         break;
        

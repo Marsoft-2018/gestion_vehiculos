@@ -186,6 +186,7 @@
     <div class="row mb-3">
         <div class="col-sm-12">
             <button class="btn btn-primary" onclick="<?php $btnFuncion ?>"> Grabar </button>
+            <button class="btn btn-success" onclick="listar_vehiculos()"> Listar Vehículos </button>
         </div>
     </div>
 </div>

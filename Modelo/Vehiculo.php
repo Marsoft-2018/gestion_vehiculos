@@ -32,9 +32,9 @@ class Vehiculo extends Conectar{
     }
 
     public function listar(){
-        $this->sql = "SELECT id, placa, nombre, idMarca, idTipo, idTipoCombustible, numero_motor, numero_chasis, modelo, idEmpresaSoat  FROM mantenimientos 
+        $this->sql = "SELECT id, placa, nombre, idMarca, idTipo, idTipoCombustible, numero_motor, numero_chasis, modelo, idEmpresaSoat  FROM vehiculos 
         WHERE estado = 'Activo' 
-        ORDER BY  tipo, nombre ASC"; 
+        ORDER BY  idTipo, nombre ASC"; 
         if(isset($this->reg_inicio) && isset($this->registros)){
             $this->sql .= " LIMIT ".$this->reg_inicio.", ".$this->registros." ";
         }
